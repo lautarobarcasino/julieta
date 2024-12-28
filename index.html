@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-image: url('/assets/fondobar.webp'); /* Imagen de fondo para toda la página */
+            background-image: url('Assets/fondobar.webp'); /* Imagen de fondo para toda la página */
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
@@ -16,7 +16,7 @@
             color: #333;
         }
         header {
-            background-image: url('/assets/portada.webp'); /* Imagen de fondo solo en el encabezado */
+            background-image: url('Assets/portada.webp'); /* Imagen de fondo solo en el encabezado */
             background-size: cover;
             background-position: center center;
             color: white;
@@ -88,23 +88,6 @@
             width: 100%;
             bottom: 0;
         }
-        .whatsapp-button {
-            background-color: #25D366;
-            color: white;
-            padding: 15px 20px;
-            font-size: 18px;
-            border-radius: 5px;
-            text-align: center;
-            display: inline-block;
-            margin-top: 20px;
-            width: 100%;
-            max-width: 400px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .whatsapp-button:hover {
-            background-color: #128C7E;
-        }
     </style>
 </head>
 <body>
@@ -138,7 +121,7 @@
                 <img src="https://larutagastro.com/wp-content/uploads/2022/06/fernet.jpeg" alt="Cóctel">
                 <h3>Fernet</h3>
                 <p>Un buen fernet con coca, bien cordobes.</p>
-                <p class="price">$6.00</p>
+                <p class="price">$6.000</p>
             </div>
             <div class="menu-item">
                 <img src="https://via.placeholder.com/250x150" alt="Vino">
@@ -170,11 +153,13 @@
                 <p class="price">$3.00</p>
             </div>
         </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Bar La Buena Vibra | Todos los derechos reservados</p>
     </footer>
-        
+
+    <script>
         // Función para buscar productos
         function searchMenu() {
             let input = document.getElementById('searchInput').value.toLowerCase();
@@ -187,3 +172,9 @@
                     item.style.display = '';
                 } else {
                     item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
