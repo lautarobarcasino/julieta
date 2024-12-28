@@ -1,3 +1,26 @@
+¡Claro! Es totalmente posible agregar un enlace para generar pedidos a través de WhatsApp en tu página web. Para esto, puedes utilizar el enlace de WhatsApp con el formato oficial de la API, que permite abrir una conversación directamente en WhatsApp con un número específico y, opcionalmente, predefinir un mensaje que el usuario podrá enviar.
+
+Te explicaré cómo hacerlo:
+
+1. **Enlace de WhatsApp:**
+   El formato básico de un enlace para abrir una conversación en WhatsApp es el siguiente:
+   
+   ```
+   https://wa.me/[número]?text=[mensaje]
+   ```
+   
+   Donde:
+   - `[número]` es el número de teléfono al que se enviará el mensaje (incluyendo el código de país, sin signos `+` ni espacios).
+   - `[mensaje]` es el mensaje predefinido que aparecerá en la conversación.
+
+2. **Implementación en la página:**
+   Podemos agregar un botón de "Hacer pedido" o "Enviar pedido por WhatsApp", y al hacer clic en él, se abrirá WhatsApp con el mensaje que predefinimos.
+
+A continuación, te muestro cómo podrías integrar este enlace en tu página:
+
+### Código actualizado con la opción de generar pedidos por WhatsApp:
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +39,7 @@
             color: #333;
         }
         header {
-            background-image: url('https://53.fs1.hubspotusercontent-na1.net/hubfs/53/PortadasdeNavidadparaFacebook16.jpeg'); /* Imagen de fondo solo en el encabezado */
+            background-image: url('https://via.placeholder.com/1920x600'); /* Imagen de fondo solo en el encabezado */
             background-size: cover;
             background-position: center center;
             color: white;
@@ -56,7 +79,7 @@
             margin-top: 20px;
         }
         .menu-item {
-            background-color: white; /* Color de casillas */
+            background-color: #f0f0f0; /* Gris claro */
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 15px;
@@ -87,6 +110,23 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            padding: 15px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .whatsapp-button:hover {
+            background-color: #128C7E;
         }
     </style>
 </head>
@@ -121,7 +161,7 @@
                 <img src="https://larutagastro.com/wp-content/uploads/2022/06/fernet.jpeg" alt="Cóctel">
                 <h3>Fernet</h3>
                 <p>Un buen fernet con coca, bien cordobes.</p>
-                <p class="price">$6.000</p>
+                <p class="price">$6.00</p>
             </div>
             <div class="menu-item">
                 <img src="https://via.placeholder.com/250x150" alt="Vino">
@@ -153,6 +193,11 @@
                 <p class="price">$3.00</p>
             </div>
         </div>
+
+        <!-- Botón de pedido por WhatsApp -->
+        <a href="https://wa.me/5493844534271?text=¡Hola!%20Quiero%20hacer%20un%20pedido%20de%20los%20siguientes%20productos%3A" target="_blank" class="whatsapp-button">
+            Realizar Pedido por WhatsApp
+        </a>
     </div>
 
     <footer>
@@ -172,9 +217,3 @@
                     item.style.display = '';
                 } else {
                     item.style.display = 'none';
-                }
-            });
-        }
-    </script>
-</body>
-</html>
