@@ -1,83 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '417107484344990');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=417107484344990&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              },
-              backgroundImage: {
-                'fondo': "url('/assets/fondo-vegas.webp')",
-                'jorge': "url('/assets/martin.jpeg')",
-                'luis': "url('/assets/luis.webp')",
-                'video': "url('/assets/portada-video.webp')",
-                'fondoaprenderas':"url('/assets/fondo-aprenderas.svg')"
-              },
-              fontFamily:{
-                montserrat: ['Montserrat', 'sans-serif'],
-                cocomatBold: ['cocomatbold', 'sans-serif'],
-                cocomatBlack: ['cocomatblack', 'sans-serif'],
-                bebas: ['bebas', 'sans-serif']
-              },
-              animation: {
-                'infinite-scroll': 'infinite-scroll 25s linear infinite',
-              },
-              keyframes: {
-                'infinite-scroll': {
-                  from: { transform: 'translateX(0)' },
-                  to: { transform: 'translateX(-100%)' },
-                  }
-              },
-            "tailwindCSS.includeLanguages": {
-              "html": "html",
-              "javascript": "javascript",
-              "css": "css"
-              },
-              "editor.quickSuggestions": {
-              "strings": true
-              }
-          },
-          
-              
-        }}
-      </script>
-    <title>Casino GyC</title>
-    <link rel="shortcut icon" href="/Assets/logo-vegas.webp" type="image/x-icon">
+    <title>Menú del Bar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .section-title {
+            background-color: #34495E;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .menu-category {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+        .menu-item img {
+            width: 100%;
+            border-radius: 8px;
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .menu-item h3 {
+            margin: 10px 0;
+            color: #2C3E50;
+        }
+        .menu-item p {
+            color: #7F8C8D;
+        }
+        .price {
+            font-weight: bold;
+            color: #E74C3C;
+        }
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
-<body class="bg-fondo bg-cover bg-center flex justify-center items-center h-screen w-screen">
-    <div class="flex flex-col justify-center items-center text-white max-w-[400px] p-2 gap-10 text-xl text-center">
-        <img class="w-[200px]" src="/Assets/logo-vegas.webp" alt="Logo Casino Vegas 365">
-        <p class=" text-3xl ">Envianos un Whatsapp <br> Para crear tu cuenta</p>
-        <div class="flex flex-col justify-center items-center slef-center gap-2">
-            <a target="_blank" href="https://wa.link/v68d8m"><button class="boton border-[#4700cc] border-[2px] p-4 rounded-xl bg-black font-bold justify-around gap-3 flex text-xl font-bebas   self-center">CREA TU USUARIO <img class="w-8" src="/Assets/whatsapp-vegas.webp" alt=""></button></a>
-            <p>Mínimo de carga $1000</p>
+<body>
+    <header>
+        <h1>Menú Digital del Bar</h1>
+        <p>Disfruta de nuestras mejores bebidas y aperitivos</p>
+    </header>
+
+    <div class="container">
+        <!-- Categoría de Bebidas -->
+        <section class="section-title">Bebidas</section>
+        <div class="menu-category">
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Cerveza">
+                <h3>Cerveza Artesanal</h3>
+                <p>Disfruta de nuestra cerveza artesanal, refrescante y deliciosa.</p>
+                <p class="price">$5.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Cóctel">
+                <h3>Cóctel Mojito</h3>
+                <p>Un mojito fresco con hierbabuena y un toque de lima.</p>
+                <p class="price">$7.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Vino">
+                <h3>Vino Tinto</h3>
+                <p>Seleccionado vino tinto para acompañar tu comida.</p>
+                <p class="price">$8.00</p>
+            </div>
         </div>
-        <h1 class="font-semibold text-2xl">EL MEJOR CASINO DEL PAÍS</h1>
-        <h2 class="font-semibold text-2xl">LAS MEJORES RULETAS DE +1000 SLOTS Y MÁS</h2>
+
+        <!-- Categoría de Aperitivos -->
+        <section class="section-title">Aperitivos</section>
+        <div class="menu-category">
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Nachos">
+                <h3>Nachos con Guacamole</h3>
+                <p>Deliciosos nachos acompañados de guacamole casero.</p>
+                <p class="price">$4.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Tacos">
+                <h3>Tacos al Pastor</h3>
+                <p>Exquisitos tacos con carne al pastor y salsa especial.</p>
+                <p class="price">$6.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Papas Fritas">
+                <h3>Papas Fritas</h3>
+                <p>Fritas crujientes, perfectas para acompañar tu bebida.</p>
+                <p class="price">$3.00</p>
+            </div>
+        </div>
     </div>
-    
+
+    <footer>
+        <p>&copy; 2024 Bar La Buena Vibra | Todos los derechos reservados</p>
+    </footer>
 </body>
 </html>
