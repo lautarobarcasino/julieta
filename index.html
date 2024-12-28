@@ -30,6 +30,18 @@
             width: 80%;
             margin: 0 auto;
         }
+        .search-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .search-container input {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
         .section-title {
             background-color: #34495E;
             color: white;
@@ -85,9 +97,14 @@
     </header>
 
     <div class="container">
+        <!-- Buscador de productos -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar producto..." onkeyup="searchMenu()">
+        </div>
+
         <!-- Categoría de Bebidas -->
         <section class="section-title">Bebidas</section>
-        <div class="menu-category">
+        <div class="menu-category" id="beverages">
             <div class="menu-item">
                 <img src="https://via.placeholder.com/250x150" alt="Cerveza">
                 <h3>Cerveza Artesanal</h3>
@@ -116,9 +133,48 @@
 
         <!-- Categoría de Aperitivos -->
         <section class="section-title">Aperitivos</section>
-        <div class="menu-category">
+        <div class="menu-category" id="snacks">
             <div class="menu-item">
                 <img src="https://via.placeholder.com/250x150" alt="Nachos">
                 <h3>Nachos con Guacamole</h3>
                 <p>Deliciosos nachos acompañados de guacamole casero.</p>
-                <p cla
+                <p class="price">$4.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Tacos">
+                <h3>Tacos al Pastor</h3>
+                <p>Exquisitos tacos con carne al pastor y salsa especial.</p>
+                <p class="price">$6.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Papas Fritas">
+                <h3>Papas Fritas</h3>
+                <p>Fritas crujientes, perfectas para acompañar tu bebida.</p>
+                <p class="price">$3.00</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bar La Buena Vibra | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Función para buscar productos
+        function searchMenu() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let items = document.querySelectorAll('.menu-item');
+            
+            // Recorre todos los elementos de menú y muestra solo los que coinciden con la búsqueda
+            items.forEach(function(item) {
+                let title = item.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
