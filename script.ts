@@ -5,7 +5,7 @@ document.querySelectorAll('.btn-agregar').forEach((boton) => {
     boton.addEventListener('click', (e) => {
         const producto = e.target.closest('.producto');
         const id = producto.dataset.id;
-        const nombre = producto.querySelector('h2').textContent;
+        const nombre = producto.querySelector('h3').textContent;
         const precio = producto.dataset.precio;
 
         carrito.push({ id, nombre, precio });
