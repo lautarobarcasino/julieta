@@ -1,41 +1,37 @@
-<main>
-    <section class="categoria" id="electronica">
-        <h2>Electrónica</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda en Línea</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Tienda en Línea</h1>
+    </header>
+    <main>
         <div class="productos">
+            <!-- Cada producto tendrá esta estructura -->
             <div class="producto" data-id="1" data-precio="100">
                 <img src="assets/img/producto1.jpg" alt="Producto 1">
-                <h3>Smartphone</h3>
-                <p>Descripción breve del smartphone.</p>
+                <h2>Producto 1</h2>
+                <p>Descripción breve del producto.</p>
                 <p><strong>$100</strong></p>
                 <button class="btn-agregar">Añadir al carrito</button>
             </div>
             <div class="producto" data-id="2" data-precio="200">
                 <img src="assets/img/producto2.jpg" alt="Producto 2">
-                <h3>Audífonos</h3>
-                <p>Descripción breve de los audífonos.</p>
+                <h2>Producto 2</h2>
+                <p>Descripción breve del producto.</p>
                 <p><strong>$200</strong></p>
                 <button class="btn-agregar">Añadir al carrito</button>
             </div>
         </div>
-    </section>
-
-    <section class="categoria" id="ropa">
-        <h2>Ropa</h2>
-        <div class="productos">
-            <div class="producto" data-id="3" data-precio="50">
-                <img src="assets/img/producto3.jpg" alt="Producto 3">
-                <h3>Camiseta</h3>
-                <p>Descripción breve de la camiseta.</p>
-                <p><strong>$50</strong></p>
-                <button class="btn-agregar">Añadir al carrito</button>
-            </div>
-            <div class="producto" data-id="4" data-precio="70">
-                <img src="assets/img/producto4.jpg" alt="Producto 4">
-                <h3>Sudadera</h3>
-                <p>Descripción breve de la sudadera.</p>
-                <p><strong>$70</strong></p>
-                <button class="btn-agregar">Añadir al carrito</button>
-            </div>
-        </div>
-    </section>
-</main>
+    </main>
+    <footer>
+        <button id="finalizar-compra">Finalizar Compra</button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
