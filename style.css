@@ -45,12 +45,3 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-.categoria {
-    margin: 20px 0;
-}
-
-.categoria h2 {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
-}
